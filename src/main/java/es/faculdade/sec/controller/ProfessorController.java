@@ -1,4 +1,4 @@
-package es.faculdade.sec.matricula.controller;
+package es.faculdade.sec.controller;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

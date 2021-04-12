@@ -1,4 +1,4 @@
-package es.faculdade.sec.matricula.model;
+package es.faculdade.sec.model;
 
 import lombok.Data;
 
