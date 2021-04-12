@@ -1,4 +1,4 @@
-package es.faculdade.sec.matricula.repo;
+package es.faculdade.sec.repo;
 
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import reactor.core.publisher.Mono;

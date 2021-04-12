@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.faculdade.sec.matricula.repo.ProfessorRepo;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -17,7 +16,7 @@ import reactor.core.publisher.Mono;
 @RequestMapping("secProfessorAPI")
 public class ProfessorController {
 
-	private ProfessorRepo professorRepo;
+	private es.faculdade.sec.repo.ProfessorRepo professorRepo;
 	
 	@PostMapping("/cadProfSec")
 	public Mono<es.faculdade.sec.model.Professor> cadastroProfessor(@PathVariable es.faculdade.sec.model.Professor professor){

@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 import es.faculdade.financeiro.igts.cobranca.GerandoBoleto;
 import es.faculdade.financeiro.igts.cobranca.GerandoBoletoPagSeguro;
 import es.faculdade.financeiro.igts.model.Boleto;
-import es.faculdade.sec.finan.model.BoletoAluno;
-import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/boletosSec")
@@ -23,7 +21,7 @@ public class BoletosMensais {
 	}
 	
 	public void boletoPagSeguro() {
-	 boletoPagSeguro.notify();
+		boletoPagSeguro.notify();
 	}
 
 }	
