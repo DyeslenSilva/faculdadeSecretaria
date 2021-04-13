@@ -8,4 +8,6 @@ public class UrlSecretaria {
 	private String returnUrl;
 	private String cancelUrl;
 	private String approve;
+	private String pageRedirect;
+	private String errorPage;
 }
