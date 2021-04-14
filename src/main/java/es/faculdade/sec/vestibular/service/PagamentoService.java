@@ -43,6 +43,28 @@ public class PagamentoService {
 	
 	private Currency currency;
 	
+	private UrlSecretaria urlSecretaria;
+	
+	private String intent;
+	public String autorizacaoPagamento(OrderDetail orderDetail)
+		throws PayPalRESTException{
+		
+		Payer payer = getPayerInformation();
+		RedirectUrls redirectUrls = getRedirectUrls(urlSecretaria);
+		List<Transaction> listTransaction = getTransactionInformation(orderDetail);
+		
+		Payment requestPayment = new Payment();
+		requestPayment.setTransactions(listTransaction);
+		requestPayment.setRedirectUrls(redirectUrls);
+		requestPayment.setPayer(payer);
+		requestPayment.setIntent(intent);
+		
+		APIContext apiContext = new APIContext();
+		
+		Payment approvedPayment = requestPayment.create(apiContext);
+		return getApprovalLink(approvedPayment, urlSecretaria);
+	}
+	
 	
 	public Payer getPayerInformation() {
 		Payer payer = new Payer();
